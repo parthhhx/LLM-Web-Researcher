@@ -1,7 +1,3 @@
-# LLM-Web-Researcher
-LangGraph agents to research any topic on the web and generate wikipedia like articles. 
-
-
 # Getting Started
 
 ## ⚙️ Installation
@@ -40,4 +36,31 @@ LangGraph agents to research any topic on the web and generate wikipedia like ar
 
 ### Other Setups
 For alternative setups (e.g., using Poetry or virtual environments), refer to the [Getting Started page](#).
+
+---
+
+## 📄 Research on Local Documents
+
+You can instruct the Researcher to run research tasks based on your local documents. Currently supported file formats are: **PDF, plain text, CSV, Excel, Markdown, PowerPoint, and Word documents**.
+
+### Steps
+
+1. **Add the `DOC_PATH` Environment Variable**
+   Point the `DOC_PATH` variable to the folder containing your documents:
+   ```bash
+   export DOC_PATH="./my-docs"
+   ```
+
+2. **Run GPT Researcher**
+   - **If Running the Frontend App**: 
+     Navigate to [http://localhost:8000](http://localhost:8000) and select **"My Documents"** from the **"Report Source"** dropdown options.
+   
+   - **If Using the PIP Package**:
+     Pass the `report_source` argument as `"local"` when instantiating the `GPTResearcher` class. Example code snippet:
+     ```python
+     from gpt_researcher import GPTResearcher
+     
+     researcher = GPTResearcher(report_source="local")
+     researcher.run_research()
+     ```
 
