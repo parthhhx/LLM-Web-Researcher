@@ -13,6 +13,7 @@ LangGraph agents to research any topic on the web and generate wikipedia like ar
 
 1. **Clone the Project**
    ```bash
+   git clone https://github.com/parthhhx/LLM-Web-Researcher.git
    cd gpt-researcher
    ```
 
